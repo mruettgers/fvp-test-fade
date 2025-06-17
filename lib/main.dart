@@ -77,23 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildContent() {
-    if ((counter % 2 == 0) || counter > 4) {
-      if (counter == 0) {
-        return Text('Text() widgets between videos are working...');
-      }
-      if (counter == 4) {
-        return Text('Next round will be only video widgets and crash on X11...');
-      } 
-      return VideoPlayerWidget(
-        key: UniqueKey(),
-        src: 'assets/videos/Big_Buck_Bunny_1080_10s_1MB.mp4',
-        onCompleted: () {
-        },
-      );
-    } else {
-      return Text('$counter');
-    }
-
+    return VideoPlayerWidget(
+      key: UniqueKey(),
+      src: 'assets/videos/Big_Buck_Bunny_1080_10s_1MB.mp4',
+      onCompleted: () {
+      },
+    );
   }
 }
 
